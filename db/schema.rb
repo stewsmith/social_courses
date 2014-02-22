@@ -11,12 +11,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140222231816) do
+ActiveRecord::Schema.define(version: 20140222224711) do
+
+  create_table "course_sessions", force: true do |t|
+    t.integer  "course_id"
+    t.integer  "instructor_id"
+    t.string   "term"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "courses", force: true do |t|
+    t.string   "title"
+    t.string   "course_num"
+    t.integer  "school_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "instructors", force: true do |t|
+    t.string   "name"
+    t.integer  "school_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reviews", force: true do |t|
+    t.integer  "course_session_id"
+    t.integer  "user_id"
+    t.integer  "score"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schools", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
-    t.string   "provider"
-    t.string   "uid"
+    t.string   "email"
     t.string   "name"
+    t.string   "uid"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
     t.datetime "created_at"
