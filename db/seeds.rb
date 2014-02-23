@@ -10,7 +10,14 @@ seed_file = File.join(Rails.root, 'db', 'seed.yml')
 data = YAML::load_file(seed_file)
 
 data['users'].each do |user|
-    #User.create(user)
+    User.create(user)
+end
+
+data['friendships'].each do |friendship|
+    Friendship.create ({
+        :user_id => friendship["user"],
+        :friend_id => friendship["friend"],
+    })
 end
 
 data['schools'].each do |school|
