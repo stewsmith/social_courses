@@ -1,0 +1,17 @@
+This is the course page.
+The course id is <%= @id %>.
+
+<p>Here are the reviews for this course.  </p>
+
+<ol>
+    <li>
+        <% @course.course_sessions.each do |session| %>
+            <%= session.term %>
+            <ol>
+                <% session.reviews.each do |review| %>
+                    <li> <%= review.content %></li>
+                <% end %>
+            </ol>
+        <% end %>
+    </li>
+</ol>
