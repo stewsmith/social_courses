@@ -9,16 +9,30 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
-        <%= render 'layouts/search_options' %>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <h1> Social Courses </h1>
+                <% if current_user %>
+                    <div class="col-md-8">
+                        <h1> Social Courses </h1>
+                    </div>
+                    <div class="col-md-4">
 
-                    <p> Courses are meant to be taken with your friends. </p>
+                        <img class="img-circle" src="<%= @picture %>" />
+                        <%= link_to 'Sign Out', signout_path, id: 'sign_out' %>
+                        You are signed in as <%= current_user.name %>.<br />
+                    </div>
+                <% else %>
+                    <div class="col-md-12">
+                        <h1> Social Courses </h1>
+                        <p> Courses are meant to be taken with your friends. </p>
+                    </div>
+                <% end %>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     <%= yield %>
                 </div>
             </div>
         </div>
-  </body>
+    </body>
 </html>
