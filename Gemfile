@@ -50,3 +50,4 @@ group :development do
 end
 
 gem 'omniauth-facebook'
+gem 'fb_graph'

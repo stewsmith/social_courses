@@ -9,21 +9,15 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
-        <header>
-        <%= render 'layouts/navigation' %>
-        </header>
-        <main role="main">
-        <%= render 'layouts/messages' %>
-        <%= yield %>
-        </main>
-        <div id="user_nav">
-            <% if current_user %>
-                Signed in as <strong><%= current_user.name %></strong>!
-                <%= link_to "Sign out", signout_path, id: "sign_out" %>
-            <% else %>
-                <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-            <% end %>
-    </div></strong>
-</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1> Social Courses </h1>
+
+                    <p> Courses are meant to be taken with your friends. </p>
+                    <%= yield %>
+                </div>
+            </div>
+        </div>
   </body>
 </html>
