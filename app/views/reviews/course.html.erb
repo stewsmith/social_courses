@@ -1,0 +1,14 @@
+<p>Here are the reviews for this <%= @course.title %>.  </p>
+
+<ol>
+    <li>
+        <% @course.course_sessions.each do |session| %>
+            <%= session.term %>
+            <ol>
+                <% session.reviews.each do |review| %>
+                    <li> <%= review.score %> - <%= review.content %></li>
+                <% end %>
+            </ol>
+        <% end %>
+    </li>
+</ol>

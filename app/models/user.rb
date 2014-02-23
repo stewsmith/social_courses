@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
     has_many :reviews
+    has_many :course_sessions, :foreign_key => 'instructor_id'
     has_many :friendships
     has_many :friends, :through => :friendships
 
