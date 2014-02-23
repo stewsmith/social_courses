@@ -1,6 +1,14 @@
 <% if current_user %>
     You are signed in as <%= current_user.name %>.<br />
     <%= link_to 'Sign Out', signout_path, id: 'sign_out' %>
+
+    <img class="img-circle" src="<%= @picture %>" />
+
+    <ol>
+    <% @friends.each do |friend| %>
+        <li> <%= friend.name %> </li>
+    <% end %>
+    </ol>
 <% else %>
     <%= link_to "", "/auth/facebook", class: "facebook-button" %>
 <% end %>
