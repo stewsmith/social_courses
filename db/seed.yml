@@ -1,0 +1,86 @@
+users:
+    -   email: "joe@mail.com"
+    -   email: "jim@mail.com"
+    -   email: "jill@mail.com"
+
+schools:
+    -   name: "Rutgers"
+        courses:
+            -   title: "Philosophy 101"
+                course_num: "AAA"
+                sessions:
+                    -   term: "F2013"
+                        instructor: "Johnson"
+                        reviews:
+                            -   score: 4
+                                user: 1
+                            -   score: 3
+                                user: 2
+                            -   score: 1
+                                user: 3
+            -   title: "Calc 2"
+                course_num: "BBB"
+                sessions:
+                    -   term: "S2013"
+                        instructor: "Sesh"
+                        reviews:
+                            -   score: 4
+                                user: 1
+                            -   score: 3
+                                user: 2
+        instructors:
+            -   name: "Sesh"
+            -   name: "Johnson"
+    -   name: "TCNJ"
+        courses:
+            -   title: "Bio 101"
+                course_num: "AAA"
+                sessions:
+                    -   term: "F2013"
+                        instructor: "Smith"
+                        reviews:
+                            -   score: 5
+                                user: 1
+                            -   score: 5
+                                user: 2
+                            -   score: 5
+                                user: 3
+            -   title: "CS 111"
+                course_num: "BBB"
+                sessions:
+                    -   term: "F2013"
+                        instructor: "Lang"
+                        reviews:
+                            -   score: 2
+                                user: 1
+                            -   score: 3
+                                user: 2
+                            -   score: 1
+                                user: 3
+        instructors:
+            -   name: "Smith"
+            -   name: "Lang"
+    -   name: "UMich"
+        courses:
+            -   title: "Chem 101"
+                course_num: "AAA"
+                sessions:
+                    -   term: "S2011"
+                        instructor: "Verma"
+                        reviews:
+                            -   score: 2
+                                user: 1
+            -   title: "Farming"
+                course_num: "DDD"
+                sessions:
+                    -   term: "F2013"
+                        instructor: "Matthews"
+                        reviews:
+                            -   score: 3
+                                user: 2
+                            -   score: 4
+                                user: 3
+        instructors:
+            -   name: "Verma"
+            -   name: "Matthews"
+
