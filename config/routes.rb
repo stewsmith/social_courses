@@ -4,7 +4,8 @@ SocialCourses::Application.routes.draw do
     get 'auth/failure', to: redirect('/')
     get 'signout', to: 'sessions#destroy', as: 'signout'
 
-    get 'reviews/course/:id', to: 'reviews#course', as: :id
+    get 'reviews/course/:course_id', to: 'reviews#course'
+    get 'reviews/instructor/:instructor_id', to: 'reviews#instructor'
 
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".

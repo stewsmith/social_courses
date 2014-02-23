@@ -1,8 +1,8 @@
-<p>Here are the reviews for this <%= @course.title %>.  </p>
+<p>Here are the reviews for <%= @instructor.name %>.  </p>
 
 <ol>
     <li>
-        <% @course.course_sessions.each do |session| %>
+        <% @instructor.course_sessions.each do |session| %>
             <%= session.term %>
             <ol>
                 <% session.reviews.each do |review| %>
